@@ -3,15 +3,9 @@ const {
   register,
   login,
   logout,
-  getCurrentUser,
-  getFavBooks,
-  getPostedBooks,
-  postBook,
-  putBook,
-  deleteBook,
-  putBookRating,
-  putBookFavorite,
-  putBookReview } = require('../controllers/userController');
+  logoutAllDevices,
+  getCurrentUser
+} = require('../controllers/userController');
 const checkAuthentication = require('../middleware/checkAuthentication');
 const userBookRouter = require('./userBookRouter');
 
@@ -20,6 +14,7 @@ const userRouter = express.Router();
 userRouter.post('/register', register);
 userRouter.post('/login', login);
 userRouter.post('/logout', checkAuthentication, logout);
+userRouter.post('/logoutall', checkAuthentication, logoutAllDevices);
 userRouter.get('/', checkAuthentication, getCurrentUser);
 userRouter.use("/books", checkAuthentication, userBookRouter);
 

@@ -4,11 +4,15 @@ const BookSchema = new mongoose.Schema({
   ISBN: { type: String, require: true, minLength: 3, maxLength: 50, index: true, unique: true },
   title: { type: String, require: true, minLength: 3, maxLength: 200, index: true, unique: true },
   description: { type: String, require: false, maxLength: 500, trim: true },
-  //publishDate: { type: Date, require: false, default: Date.now },
+  publishDate: { type: Date, require: false },
 
   ratings: { type: Number, default: 0, index: true },
   avgRating: { type: Number, default: 0, index: true },
-  postedBy: { type: mongoose.SchemaTypes.ObjectId, index: true }
+  postedBy: { type: mongoose.SchemaTypes.ObjectId, index: true },
+
+  authors: [String],
+  categories: [String],
+
 
   // authors: [
   //   { type: mongoose.Schema.Types.ObjectId, ref: 'Book' }
@@ -16,12 +20,12 @@ const BookSchema = new mongoose.Schema({
   // categories: [
   //   { type: mongoose.Schema.Types.ObjectId, ref: 'Category' }
   // ],
-}, {});
+}, { timestamps: true });
 
 
-BookSchema.statics.isValidBook = function (book) {
+// BookSchema.statics.isValidBook = function (book) {
 
-}
+// }
 
 
 const Book = mongoose.model('Book', BookSchema);

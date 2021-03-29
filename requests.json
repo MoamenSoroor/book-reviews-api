@@ -1,0 +1,186 @@
+{
+  "user register": [
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/register",
+      "content": {
+        "userName": "moamen soroor",
+        "password": "1234",
+        "email": "moamensoroor@gmail.com"
+      }
+    },
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/register",
+      "content": {
+        "userName": "mohammed",
+        "password": "12345",
+        "email": "mohammed@gmail.com"
+      }
+    }
+  ],
+  "user login": [
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/login",
+      "content": {
+        "password": "1234",
+        "email": "moamensoroor@gmail.com"
+      }
+    },
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/login",
+      "content": {
+        "password": "12345",
+        "email": "mohammed@gmail.com"
+      }
+    }
+  ],
+  "user logout": [
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/logout"
+    },
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/logout"
+    }
+  ],
+  "user logout all devices": [
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/logoutall"
+    },
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/logoutall"
+    }
+  ],
+  "user posts a book": [
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/books/",
+      "content": {
+        "ISBN": "100",
+        "title": "you don't know js",
+        "description": "It’s easy to learn parts of JavaScript,",
+        "publishData": "1995-01-22",
+        "authors": [
+          "kyle Simpson"
+        ],
+        "categories": [
+          "programming",
+          "computer science"
+        ]
+      }
+    },
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/books/",
+      "content": {
+        "ISBN": "200",
+        "title": "Pro C# Book",
+        "description": "the best C# book ever",
+        "publishData": "2019-01-22",
+        "authors": [
+          "Troelsen",
+          "Andrew",
+          "Japikse",
+          "Philip"
+        ],
+        "categories": [
+          "programming",
+          "dotnet",
+          "computer science"
+        ]
+      }
+    },
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/books/",
+      "content": {
+        "ISBN": "300",
+        "title": "Hamlet",
+        "description": "Relationships are complicated; whether it’s between father and son or husband and wife",
+        "publishData": "2005-10-06",
+        "authors": [
+          "William Shakespeare"
+        ],
+        "categories": [
+          "Sociaty",
+          "Drama"
+        ]
+      }
+    },
+    {
+      "type": "post",
+      "url": "http://localhost:3000/user/books/",
+      "content": {
+        "ISBN": "400",
+        "title": "Building APIs with Node.js",
+        "description": "The code that is mentioned in the book is written with the latest JavaScript for the reader’s convenience. Along with the theoretical parts, there are also practical parts to ensure you are properly prepared.",
+        "publishData": "2018-11-23",
+        "authors": [
+          "Caio Repero"
+        ],
+        "categories": [
+          "Programming",
+          "computer science",
+          "nodejs"
+        ]
+      }
+    }
+  ],
+  "user rates a book": [
+    {
+      "type": "put",
+      "url": "http://localhost:3000/user/books/rating",
+      "content": {
+        "bookId": "here object id",
+        "rating": 1
+      },
+      "comments": "rating is between [0, 0.5, 1, 1.5, 2.5, 3, 3.5, 4, 4.5, 5]"
+    }
+  ],
+  "user favs a book": [
+    {
+      "type": "put",
+      "url": "http://localhost:3000/user/books/fav",
+      "content": {
+        "bookId": "here object id",
+        "status": 1
+      },
+      "comments": "status is between [1,2,3] which means [1=reading, 2=currently reading, 3=read]"
+    }
+  ],
+  "user reviews a book": [
+    {
+      "type": "put",
+      "url": "http://localhost:3000/user/books/review",
+      "content": {
+        "bookId": "here object id",
+        "review": "your review here!"
+      },
+      "comments": ""
+    }
+  ],
+  "get books user has rated it": [
+    {
+      "type": "get",
+      "url": "http://localhost:3000/user/books/rating"
+    }
+  ],
+  "get books user has fav it": [
+    {
+      "type": "get",
+      "url": "http://localhost:3000/user/books/fav"
+    }
+  ],
+  "get books user has reviewed it": [
+    {
+      "type": "get",
+      "url": "http://localhost:3000/user/books/review"
+    }
+  ]
+}

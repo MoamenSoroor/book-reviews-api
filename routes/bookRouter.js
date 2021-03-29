@@ -1,13 +1,15 @@
 const express = require('express');
-const { getBook, getBooks } = require('../controllers/bookController');
+const { getBook, getBooks, getBookFullDetails } = require('../controllers/bookController');
 
 
 
 const bookRouter = express.Router();
 
 bookRouter.get("/", getBooks);
-bookRouter.get("/books", getBooks);
-bookRouter.get("/:id", getBook); //access with req.params.id
+bookRouter.get("/allbooks", getBooks);
+bookRouter.get("/book", getBook);
+bookRouter.get("/details", getBookFullDetails);
+
 // bookRouter.put("/:id", updateBook);
 // bookRouter.post("/", addBook);
 // bookRouter.delete("/", deleteBook);

@@ -5,6 +5,7 @@ const apiRouter = require('./routes/apiRouter');
 const userRouter = require('./routes/userRouter');
 const initDatabase = require('./data/initDatabase');
 const config = require("./config.json");
+const reqIp = require('request-ip');
 //init database connection
 
 initDatabase();
@@ -12,6 +13,7 @@ initDatabase();
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(reqIp.mw());
 app.use(express.json());
 app.use(cookieParser());
 
