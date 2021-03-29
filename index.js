@@ -2,10 +2,11 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const apiRouter = require('./routes/apiRouter');
-const userRouter = require('./routers/userRouter');
-const initMongoose = require('./initMongoose');
+const userRouter = require('./routes/userRouter');
+const initDatabase = require('./data/initDatabase');
 const config = require("./config.json");
 //init database connection
+
 initDatabase();
 
 const app = express();
@@ -23,7 +24,7 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(config.port, () => {
-  console.log('listening on port:', port);
+  console.log('listening on port:', config.port);
 });
 
 

@@ -6,7 +6,8 @@ const getAuthors = (req, res) => {
   // const authors = await Author.find({}).catch(err => new CustomError(404, "Error in requesting authors"));
   // res.send(authors);
   console.log("get authors", req.body);
-}; console.log(req.params);
+  console.log(req.params);
+};
 
 
 const getAuthor = (req, res) => {
@@ -17,7 +18,8 @@ const getAuthor = (req, res) => {
   // res.send(authors);
 
   console.log("get author", req.body);
-}; console.log(req.params);
+  console.log(req.params);
+};
 
 
 const postAuthor = (req, res) => {
