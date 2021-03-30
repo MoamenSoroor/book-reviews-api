@@ -149,7 +149,9 @@ const getFavBooks = async (req, res, next) => {
           foreignField: "_id",
           as: "book"
         }
-      }
+      },
+      { $unwind: "$book" },
+      { $project: { "status": 1, "book": 1 } }
     ]);
 
     res.send(books);
@@ -174,7 +176,9 @@ const getRatedBooks = async (req, res, next) => {
           foreignField: "_id",
           as: "book"
         }
-      }
+      },
+      { $unwind: "$book" },
+      { $project: { "rating": 1, "book": 1 } }
     ]);
 
     res.send(books);
@@ -197,7 +201,9 @@ const getReviewedBooks = async (req, res, next) => {
           foreignField: "_id",
           as: "book"
         }
-      }
+      },
+      { $unwind: "$book" },
+      { $project: { "review": 1, "book": 1 } }
     ]);
 
     res.send(books);

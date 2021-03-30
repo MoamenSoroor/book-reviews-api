@@ -140,7 +140,7 @@
         "bookId": "here object id",
         "rating": 1
       },
-      "comments": "rating is between [0, 0.5, 1, 1.5, 2.5, 3, 3.5, 4, 4.5, 5]"
+      "comments": "Please Note: rating is between [0, 0.5, 1, 1.5, 2.5, 3, 3.5, 4, 4.5, 5]"
     }
   ],
   "user favs a book": [
@@ -151,7 +151,7 @@
         "bookId": "here object id",
         "status": 1
       },
-      "comments": "status is between [1,2,3] which means [1=reading, 2=currently reading, 3=read]"
+      "comments": "Please Note: status is between [1,2,3] which means [1=reading, 2=currently reading, 3=read]"
     }
   ],
   "user reviews a book": [
@@ -162,7 +162,7 @@
         "bookId": "here object id",
         "review": "your review here!"
       },
-      "comments": ""
+      "comments": "Please Note: you can write any string in review like social media comments"
     }
   ],
   "get books user has rated it": [
@@ -174,13 +174,38 @@
   "get books user has fav it": [
     {
       "type": "get",
-      "url": "http://localhost:3000/user/books/fav"
+      "url": "http://localhost:3000/user/books/fav",
+      "comments": "Please Note: fav is in the shape of status which is between [1,2,3] which means [1=reading, 2=currently reading, 3=read]"
     }
   ],
   "get books user has reviewed it": [
     {
       "type": "get",
       "url": "http://localhost:3000/user/books/review"
+    }
+  ],
+  "public access to the whole book": [
+    {
+      "type": "get",
+      "url": "http://localhost:3000/api/books/"
+    }
+  ],
+  "public access to a specific book": [
+    {
+      "type": "get",
+      "url": "http://localhost:3000/api/books/",
+      "content": {
+        "bookId": "here object id"
+      }
+    }
+  ],
+  "public access to a specific book with reviews and ratings": [
+    {
+      "type": "get",
+      "url": "http://localhost:3000/api/books/details",
+      "content": {
+        "bookId": "here object id"
+      }
     }
   ]
 }
