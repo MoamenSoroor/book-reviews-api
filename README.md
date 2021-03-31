@@ -1,1 +1,2 @@
-# good-readers-api-app
+# Simple Book Reviews API app
+
