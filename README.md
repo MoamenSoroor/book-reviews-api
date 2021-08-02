@@ -6,6 +6,7 @@ books with its Reviews, review book with 1-5 stars, and write a comment on a boo
   NodeJs – Express – mongoose - mongodb
 
 ## Sample of Requests: 
+it is possible to make one of the following requests on the api: 
 
 Register User: 
 ------------------------------------
@@ -107,26 +108,42 @@ Get Request On http://localhost:3000/user/books/rating
 
 
   
-Get Books User Has Favourite It
+Get Books User Has Favorited It
 ------------------------------------
 Get Request On http://localhost:3000/user/books/fav
 
 
 
+  
+Get Books User Has Reviewed It
+------------------------------------
+Get Request On http://localhost:3000/user/books/review
 
 
+  
+Public API List All Books
+------------------------------------
+Get Request On http://localhost:3000/api/books/
 
 
+Public API Access To Specific Book
+------------------------------------
+Get Request On http://localhost:3000/api/books/
 
+```json
+{
+        "bookId": "book id here"
+}
+```
 
-
-
-
-
-
-
-
-
+Public API Access To Specific Book
+------------------------------------
+Get Request On http://localhost:3000/api/books/details
+```json
+{
+        "bookId": "book id here"
+}
+```
 
 
 
