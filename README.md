@@ -17,6 +17,7 @@ also, there is a public API that allows consumers to:
   NodeJs – Express – mongoose - mongodb
 
 ## Sample of Requests: 
+suppose that our API URL is http://localhost:3000, 
 it is possible to make one of the following requests on the api: 
 
 Register User: 
