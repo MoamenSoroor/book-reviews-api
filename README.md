@@ -4,7 +4,7 @@ ITI Nodejs Course Project, Book Reviews API that allows API consumer to register
 - add a book to the system.
 - rate a book(five stars system).
 - write a comment on a book.
-- favour a book [1=reading, 2=currently reading, 3=read].
+- favor a book [1=reading, 2=currently reading, 3=read].
 - list books he created.
 - list books he favored.
 - list books he rated.
@@ -56,7 +56,7 @@ User logout all Devices:
 Post Request On http://localhost:3000/user/logoutall
 
 
-User Post a Book
+User Posts a Book
 ------------------------------------
 Post Request On http://localhost:3000/user/books/
 With Body 
@@ -90,7 +90,7 @@ With Body
 Please Note: rating is between [0, 0.5, 1, 1.5, 2.5, 3, 3.5, 4, 4.5, 5]
 
 
-User Favourite a Book
+User favors a Book
 ------------------------------------
 Put Request On http://localhost:3000/user/books/fav
 With Body 
@@ -103,7 +103,7 @@ With Body
 Please Note: status is between [1,2,3] which means [1=reading, 2=currently reading, 3=read]
 
 
-User Reviews a Book
+User Reviews a Book (Comments)
 ------------------------------------
 Put Request On http://localhost:3000/user/books/review
 With Body 
@@ -116,21 +116,21 @@ With Body
 Please Note: you can write any string in review like social media comments
 
 
-Get Books User Has Rated It
+Get Books User Rated It
 ------------------------------------
 Get Request On http://localhost:3000/user/books/rating
 
 
 
   
-Get Books User Has Favorited It
+Get Books User favored It
 ------------------------------------
 Get Request On http://localhost:3000/user/books/fav
 
 
 
   
-Get Books User Has Reviewed It
+Get Books User Reviewed It
 ------------------------------------
 Get Request On http://localhost:3000/user/books/review
 
@@ -151,7 +151,7 @@ Get Request On http://localhost:3000/api/books/
 }
 ```
 
-Public API Access To Specific Book with its full details
+## Public API Access To Specific Book with its full details
 ------------------------------------
 Get Request On http://localhost:3000/api/books/details
 ```json
