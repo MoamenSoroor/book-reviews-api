@@ -1,7 +1,18 @@
-# Book Reviews API app with Nodejs
+# Book Reviews API
 
-ITI Nodejs Course Project, Book Reviews API that allow API consumer to register, login, add book, list
-books with its Reviews, review book with 1-5 stars, and write a comment on a book.
+ITI Nodejs Course Project, Book Reviews API that allows API consumer to register, login, then he can use private API that allows him to:
+- add a book to the system.
+- rate a book(five stars system).
+- write a comment on a book.
+- favour a book [1=reading, 2=currently reading, 3=read].
+- list books he created.
+- list books he favored.
+- list books he rated.
+- list books he wrote a comment on it.
+also, there is a public API that allows consumers to:
+- list all books in the system
+- access specific book with its id.
+- access specific book with its full details.
 ## Technologies used: 
   NodeJs – Express – mongoose - mongodb
 
@@ -30,6 +41,10 @@ With Body
         "email": "moamensoroor@gmail.com"
 }
 ```
+NOTE: token will be returned and API Comsumer must send it to the API each time he make a request
+NOTE: token will be removed after 10 minutes - for testing purposes and you can increase the time - , 
+      and user must login again.
+
 
 User logout: 
 ------------------------------------
@@ -95,7 +110,7 @@ With Body
 ```json
 {
         "bookId": "book id here",
-        "review": 1
+        "review": "your comment goes here."
 }
 ```
 Please Note: you can write any string in review like social media comments
@@ -136,7 +151,7 @@ Get Request On http://localhost:3000/api/books/
 }
 ```
 
-Public API Access To Specific Book
+Public API Access To Specific Book with its full details
 ------------------------------------
 Get Request On http://localhost:3000/api/books/details
 ```json
@@ -144,45 +159,6 @@ Get Request On http://localhost:3000/api/books/details
         "bookId": "book id here"
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
