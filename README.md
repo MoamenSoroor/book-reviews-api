@@ -151,7 +151,7 @@ Get Request On http://localhost:3000/api/books/
 }
 ```
 
-## Public API Access To Specific Book with its full details
+Public API Access To Specific Book with its full details
 ------------------------------------
 Get Request On http://localhost:3000/api/books/details
 ```json
